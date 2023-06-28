@@ -9,4 +9,4 @@ if (a == 1 || a == 2) {
     console.log(a * 10.5);
 } else {
     console.log((2 * 10.5) + ((a - 2) * 4))
-}
+};
