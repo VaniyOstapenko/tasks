@@ -7,6 +7,12 @@
 
 let a = +prompt('введите значение');
 
-if (a === 0 < 18) {
+if (a === 0, a < 19) {
     console.log('детство');
+} else if (a === 19, a < 41) {
+    console.log('молодость')
+} else if (a === 41, a < 101) {
+    console.log('зрелость');
+} else if(a>100){
+    console.log('некорректный ввод');
 }
