@@ -4,6 +4,12 @@
 // Привести к одному регистру, убрать 
 // лишние пробелы
 
-let a = prompt('введите').trim().toLowerCase();
+let a = prompt('введите строку').trim().toLowerCase();
 
-console.log(!isNaN(a ? 'ошибка' : a.length));
+if (!isNaN(a)) {
+    console.log('ошибка')
+} else {
+    console.log(a.length);
+}
+
+console.log(!isNaN(a) ? 'ошибка' : a.length);

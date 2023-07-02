@@ -2,10 +2,12 @@
 // В противном случае false. 
 // Добавить проверки для строк. Удалить лишние пробелы
 
-let a = +prompt('ввести строку');
-
-if(typeof a === 'string'){
+let a = prompt('ввести строку').trim();
+let str = 'hschool'
+if (!isNaN(a)) {
+    console.log('ошибка');
+} else if (a === str) {
     console.log(true);
-}else{
+} else {
     console.log(false);
 }

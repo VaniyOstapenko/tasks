@@ -4,13 +4,18 @@
 // Добавить проверку на ввод только чисел 1234 -> 1 –неч 2 –чет 3 –неч 4 –чет
 
 let a = prompt('введите четырёхзначное число');
-
+let number = a.split('')
 if (isNaN(a)) {
-    console.log('неверный ввод');
+    console.log('ошибка');
+} else if ((a > 999 && a < 10000) && (a % 2 === 0)) {
+    console.log((a[0]), 'чётное');
+    console.log((a[1]), 'чётное');
+    console.log((a[2]), 'чётное');
+    console.log((a[3]), 'чётное');
+
 } else {
-    if (a % 2 === 0) {
-        console.log('чётное');
-    } else {
-        console.log('нечётное');
-    } 
+    console.log((a[0]), 'нечётное');
+    console.log((a[1]), 'нечётное');
+    console.log((a[2]), 'нечётное');
+    console.log((a[3]), 'нечётное');
 }
