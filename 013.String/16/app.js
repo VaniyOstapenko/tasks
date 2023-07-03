@@ -2,10 +2,12 @@
 // разделенных одним пробелом. Напишите программу, которая проверяет, 
 // что имя и фамилия начинаются с заглавной буквы. Chris Alan => true chris alan => false
 
-let a = prompt('введите имена');
+let a = prompt('введите имена'); 
 
 if (a[0] === a[0].toUpperCase()) {
-    console.log(a.indexOf(0))
+    console.log(true);
+} else {
+    console.log(false);
 }
 
 
