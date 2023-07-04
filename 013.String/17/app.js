@@ -3,9 +3,9 @@
 // Текст хороший, если содержит подстроку «хорош» во всевозможных регистрах. 
 // я очень хороший текст => true
 
-let a = prompt('введите текст').toLowerCase().toUpperCase();
+let a = prompt('введите текст');
 
-if (a.indexOf('хорош'), a.lastIndexOf('хорош')) {
+if (a.includes('хорош')) {
     console.log(true);
 } else {
     console.log(false);
