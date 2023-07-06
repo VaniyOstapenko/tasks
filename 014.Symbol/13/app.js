@@ -5,9 +5,14 @@
 // 135 -> 9
 
 let a = prompt('введите значение');
-let str = a.split('')
-if (isNaN(a)) {
-    console.log('ошибка');
-} else {
-    console.log(Number(str[0]) + Number(str[1]) + Number(str[2]));
-} 
+
+let result = 0;
+
+if (!isNaN(a)) {
+    for (let i = 0; i < a.length; i++) {
+        result += +a[i];
+    }
+    console.log(result);
+}else{
+    console.log('error');
+}
