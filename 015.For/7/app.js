@@ -2,7 +2,7 @@
 // верхний регистр несколькими 
 // способами
 
-const a = 'hello Arina'.toLowerCase();
+const a = 'hello Arina';
 
 for (let i = 0; i < a.length; i++) {
     if (i === 0) {

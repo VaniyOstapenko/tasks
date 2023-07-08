@@ -7,9 +7,9 @@ let a = 5;
 
 for (let i = 1; i <= 5; i++) {
     if (!isNaN(a)) {
-        console.log(result = i);
+        console.log(i);
     } else {
         console.log('ошибка');
     }
 }
-console.log(result);
+console.log(a);
