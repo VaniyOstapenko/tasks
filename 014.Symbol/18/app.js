@@ -4,12 +4,13 @@
 
 let a = prompt('ввод');
 
-
+let result = '';
 
 for (let i = 0; i < a.length; i++) {
     if (a[i] === a[i].toUpperCase()) {
-        console.log(a[i].toLowerCase());
-    }else{
-        console.log(a[i].toUpperCase());
+        result += a[i].toLowerCase();
+    } else {
+        result += a[i].toUpperCase();
     }
 }
+console.log(result);

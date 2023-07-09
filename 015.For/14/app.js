@@ -3,13 +3,12 @@
 // Добавить проверку вводимого значения, 
 // если это текст –> сообщение об ошибке
 
-let a = 5;
+let a = 7;
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= a; i++) {
     if (!isNaN(a)) {
         console.log(i);
     } else {
         console.log('ошибка');
     }
 }
-console.log(a);

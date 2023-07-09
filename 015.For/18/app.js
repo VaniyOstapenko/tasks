@@ -5,12 +5,21 @@
 // 1 неч 2 чет 3 неч4 чет 
 // 444444 -> 4 чет 4 чет 4 чет 4 чет 4 чет 4 чет
 
-let a = 3721;
+let a = '3721';
+let b = '4444';
 
-let result = 1;
+for (let i = 0; i < a.length; i++) {
+    if (a[i] % 2 === 0) {
+        console.log(a[i] + '-чётное');
+    } else {
+        console.log(a[i] + '-нечётное');
+    }
+}
 
-for (let i = 1; i < a.length; i++) {
-    if (a % 2 === 0) {
-        console.log('чётное');
+for (let i = 0; i < a.length; i++) {
+    if (b[i] % 2 === 0) {
+        console.log(b[i] + '-чётное');
+    } else {
+        console.log(b[i] + '-нечётное');
     }
 }
