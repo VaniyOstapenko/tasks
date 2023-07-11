@@ -4,12 +4,9 @@
 
 let a = prompt('ввести строку');
 let b = 'hschool';
-if (isNaN(a) && (a === b)) {
-    console.log(true);
+
+if (!isNaN(a)) {
+    a % 2 === 0 ? console.log('чётное') : console.log('нечётное');
 } else {
-    console.log(false);
-} if (!isNaN(a) && (a % 2 === 0)) {
-    console.log('чётное');
-} else {
-    console.log('нечётное');
+    a === b ? console.log(true) : console.log(false);
 }
