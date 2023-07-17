@@ -15,7 +15,7 @@ let result = 0;
 // }
 // console.log(result);
 
-for (let el of arr){
-    el>=0? result += el : null
+for (let el of arr) {
+  el >= 0 ? (result += el) : null;
 }
 console.log(result);
