@@ -1,11 +1,10 @@
 // Пользователь вводит число, являющееся количеством элементов будущего массива.
 // Напишите код заполнения массива методом prompt.
 
-let a = 10;
-
-let result = [];
-
-for (let i = 0; i < a.length; i++) {
-  result.push(a[i]);
+let arr = prompt("количество элементов массива");
+let str = [];
+for (let i = 1; i <= arr; i++) {
+  let num = prompt('какой вы хотели бы внести элемент')
+  str.push(num);
 }
-console.log(result);
+console.log(str);
