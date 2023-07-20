@@ -23,7 +23,7 @@ for (let i = 0; i < n; i++) {
 }
 console.log(arr_2);
 
-if (arr == arr_2) {
+if (arr.join('') === arr_2.join('')) {
   console.log(true);
 } else {
   console.log(false);
