@@ -10,7 +10,7 @@ const n = prompt("количество элементов");
 let arr = [];
 for (let i = 0; i < n; i++) {
   let el = prompt("введите элементы");
-  if (isNaN) {
+  if (isNaN(el)) {
     arr.push(el);
   }
 }
