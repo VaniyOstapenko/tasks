@@ -11,7 +11,7 @@ for (let i = 0; i < n; i++) {
 }
 
 const new_arr = arr.filter(function (el) {
-  if (!isNaN(el) && el !== "") {
+  if (!isNaN(el)) {
     return true;
   } else {
     return false;

@@ -8,7 +8,7 @@
 // let arr = "0,1";
 // let num = 0;
 // let str = 1;
-// for (let i = 3; i <= 10; i++) {
+// for (let i = 3; i <= a; i++) {
 //   let sum = num + str;
 //   num = str;
 //   str = sum;
