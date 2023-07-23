@@ -8,3 +8,30 @@
 // 6 -> [[1, 2, 3, 4, 5, 6]]
 
 const arr = [1, 2, 3, 4, 5, 6];
+let n = +prompt("");
+for (let i = 0; i < arr.length; i++) {
+  if (n === 1) {
+    console.log([[1], [2], [3], [4], [5], [6]]);
+    break;
+  }
+  if (n === 2) {
+    console.log([ [1, 2], [3, 4],[5, 6],]);
+    break;
+  }
+  if (n === 3) {
+    console.log([[1, 2, 3],[4, 5, 6],]);
+    break;
+  }
+  if (n === 4) {
+    console.log([[1, 2, 3, 4],[5, 6],]);
+    break;
+  }
+  if (n === 5) {
+    console.log([[1, 2, 3, 4, 5], [6]]);
+    break;
+  }
+  if (n === 6) {
+    console.log([[1, 2, 3, 4, 5, 6]]);
+    break;
+  }
+}

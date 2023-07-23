@@ -5,9 +5,28 @@
 const n = prompt("количество элементов");
 let arr = [];
 for (let i = 0; i < n; i++) {
-  let check = prompt("введите элемент массива");
+  let check = +prompt("введите элемент массива");
   if (!isNaN(check)) {
     arr.push(check);
   }
 }
 
+// const result = arr.reduce(function (sum, el) {
+//   if (el != 0) {
+//     return sum + +el;
+//   } else {
+//     return ;
+//   }
+// }, 0);
+// console.log(result);
+
+let sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] === 0) {
+    break;
+  } else {
+    sum += arr[i];
+  }
+}
+console.log(sum);
