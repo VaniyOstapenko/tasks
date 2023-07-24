@@ -9,29 +9,19 @@
 
 const arr = [1, 2, 3, 4, 5, 6];
 let n = +prompt("");
-for (let i = 0; i < arr.length; i++) {
-  if (n === 1) {
-    console.log([[1], [2], [3], [4], [5], [6]]);
-    break;
+if (!isNaN(n)) {
+  let dad_arr = [];
+  let son_arr = [];
+  for (let i = 0; i < arr.length; i++) {
+    son_arr.push(arr[i]);
+
+    if (son_arr.length === n) {
+      dad_arr.push(son_arr);
+      son_arr = [];
+    }
   }
-  if (n === 2) {
-    console.log([ [1, 2], [3, 4],[5, 6],]);
-    break;
-  }
-  if (n === 3) {
-    console.log([[1, 2, 3],[4, 5, 6],]);
-    break;
-  }
-  if (n === 4) {
-    console.log([[1, 2, 3, 4],[5, 6],]);
-    break;
-  }
-  if (n === 5) {
-    console.log([[1, 2, 3, 4, 5], [6]]);
-    break;
-  }
-  if (n === 6) {
-    console.log([[1, 2, 3, 4, 5, 6]]);
-    break;
-  }
+  son_arr.length === 0 ? null : dad_arr.push(son_arr);
+  console.log(dad_arr);
+} else {
+  console.log("ошибка ввода");
 }
