@@ -19,4 +19,4 @@ let result = arr.reduce(function (sum, el) {
 }, 0);
 
 obj.sum = result;
-console.log(obj);
+console.log(obj); 

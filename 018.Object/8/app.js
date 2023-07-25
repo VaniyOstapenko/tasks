@@ -2,15 +2,15 @@
 
 const obj = {
   name: "Ivan",
-  secondname: "Ostapenko",
+  surname: "Ostapenko",
   age: 28,
 };
 
 let count = 0;
 
-for(let key in obj){
-    if(obj[key]){
-        count++
-    }
+for (let key in obj) {
+  if (obj[key]) {
+    count++;
+  }
 }
 console.log(count);

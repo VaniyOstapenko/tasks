@@ -4,7 +4,7 @@
 
 const obj = {
   name: "Ivan",
-  secondname: "Ostapenko",
+  surname: "Ostapenko",
   age: 28,
   weigth: 72,
   heigth: 175,

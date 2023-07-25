@@ -2,9 +2,9 @@
 // вывести все числовые ключи.
 
 const obj = {
-  1: "test",
-  2: "test_2",
-  name: "hschool",
+  1: "Ivan",
+  Surname: "Ostapenko",
+  3: "Igorevich",
 };
 
 for (let key in obj) {
