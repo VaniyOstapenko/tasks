@@ -12,10 +12,10 @@ for (let i = 0; i < n; i++) {
 }
 
 // const result = arr.reduce(function (sum, el) {
-//   if (el != 0) {
-//     return sum + +el;
+//   if (el === 0) {
+//     return false;
 //   } else {
-//     return ;
+//     return sum + +el;
 //   }
 // }, 0);
 // console.log(result);
