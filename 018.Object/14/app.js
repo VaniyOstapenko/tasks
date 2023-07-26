@@ -20,9 +20,24 @@ const obj = {
   6: 1,
 };
 
+let new_obj = {};
+let arr = [];
+
 for (let key in obj) {
-  if (){
-    
-  }
+  arr.push(obj[key]);
 }
-console.log(obj);
+
+let new_arr = [];
+arr.forEach(function (el) {
+  if (!new_arr.includes(el)) {
+    return new_arr.push(el);
+  } else {
+    return "error";
+  }
+});
+
+for (let i = 0; i < new_arr.length; i++) {
+  new_obj[i] = new_arr[i];
+}
+
+console.log(new_obj);
