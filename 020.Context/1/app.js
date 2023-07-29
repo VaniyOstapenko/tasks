@@ -2,8 +2,8 @@
 
 const num = "150";
 
-function doReverse(str) {
-  return str.split("").reverse().join("");
+function doReverse(num) {
+  return num.split("").reverse().join("");
 }
 
 let result = doReverse(num);

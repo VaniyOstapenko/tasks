@@ -9,10 +9,7 @@ function checkEmail(em) {
   let obj = {};
   obj.email = "em";
   if (
-    (em.includes("@") && em.includes(".com")) ||
-    em.includes(".ru") ||
-    em.includes(".by")
-  ) {
+    (em.includes("@") && em.includes(".com")) || em.includes(".ru") || em.includes(".by")) {
     obj.active = true;
   } else {
     obj.active = false;
