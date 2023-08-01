@@ -6,3 +6,15 @@ function doPassword() {
 
 let result = doPassword();
 console.log(result);
+
+function doPass() {
+  let str = '';
+  for (let i = 0; i < 8; i++) {
+    let num = Math.round(Math.random() * 9);
+    str += num
+  }
+  return str
+}
+
+let result1 = doPass()
+console.log(result);

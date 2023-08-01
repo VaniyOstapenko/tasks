@@ -8,10 +8,10 @@ const obj = {
   growth: 175,
 };
 
-(function doCount(obj) {
+(function (obj) {
   let count = 0;
   for (let key in obj) {
     count++;
   }
   console.log(count);
-})(obj);
+}(obj));
