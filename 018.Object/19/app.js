@@ -10,3 +10,16 @@ const obj = {
   category: "test",
   priority: 1,
 };
+
+let new_obj = {}
+for (let key in obj) {
+  if (obj.label === (obj.category || obj.priority)) {
+    console.log('ошибка');
+    break;
+  } else {
+    new_obj.id = obj.label.toLowerCase();
+    new_obj[key] = obj[key];
+  }
+}
+
+console.log(new_obj);
