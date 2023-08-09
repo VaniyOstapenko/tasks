@@ -6,3 +6,25 @@
 // определите сумму, которую получит мальчик. Гарантируется, что на пути всегда будет хотя бы один нулевой дом. 
 // Добавить проверку, что номера домов –только числа. [5, 1, 2, 3, 0, 1, 5, 0, 2] –> 11 (5 + 1 + 2 + 3 = 11)
 
+const arr = [5, 1, 2, 3, 0, 1, 5, 0, 2];
+
+function doSum(arr) {
+    try {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (isNaN(arr[i])) {
+                throw new Error('Не верный ввод');
+            } else if (arr[i] === 0) {
+                break;
+            } else {
+                sum += arr[i];
+            }
+        }
+        return sum;
+    } catch (error) {
+        return error.message;
+    }
+}
+
+let result = doSum(arr);
+console.log(result);

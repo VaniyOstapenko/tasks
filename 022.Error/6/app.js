@@ -4,3 +4,21 @@
 // Требуется сравнить каждую сторону с суммой двух других. Если хотя бы в одном случае сторона окажется 
 // больше либо равна сумме двух других, то треугольника с такими сторонами не существует.
 
+const a = 15;
+const b = 10;
+const c = 5;
+
+function doTriangle(a, b, c) {
+    try {
+        if ((a + b) > c && (b + c) > a && (c + a) > b) {
+            return true;
+        } else {
+            throw new Error('Не треугольник')
+        }
+    } catch (error) {
+        return error.message;
+    }
+}
+
+let result = doTriangle(a, b, c);
+console.log(result);

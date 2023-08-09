@@ -19,11 +19,11 @@ function doCheck(result) {
     let check = result.map(function (el) {
         if (!isNaN(el)) {
             return el;
-        }else{
-            return 'Не число'
+        } else {
+            return 'Не число';
         }
     })
-    return check
+    return check;
 }
 
 let result2 = doCheck(result);
