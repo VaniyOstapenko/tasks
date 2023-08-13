@@ -16,26 +16,39 @@ function doArray(n) {
 let result = doArray(n);
 
 function doCheck(result) {
-    let check = result.map(function (el) {
-        if (!isNaN(el)) {
-            return el;
-        } else {
-            return 'Не число';
-        }
-    })
-    return check;
+    try {
+        let check = [];
+        result.forEach(function (el) {
+            if (!isNaN(el)) {
+                check.push(el);
+            } else {
+                throw new Error('Не число');
+            }
+        })
+        return check;
+    } catch (error) {
+        return error.message;
+    }
 }
 
 let result2 = doCheck(result);
 
 function doRange(result2) {
-    let res = result2.filter(function (el) {
-        if (el > 10 && el < 100) {
-            return true;
+    try {
+        let arr4 = [];
+        for (let i = 0; i < result2.length; i++) {
+            if (result2[i] > 10 && result2[i] < 100) {
+                arr4.push(result2[i]);
+            } else if (isNaN(result2[i])) {
+                throw new Error('Ошибка ввода');
+            }
         }
-    })
-    return res;
+        return arr4;
+    } catch (error) {
+        return error.message;
+    }
 }
+
 
 let result3 = doRange(result2);
 console.log(result3);

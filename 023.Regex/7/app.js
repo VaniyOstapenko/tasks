@@ -11,7 +11,7 @@ const str = 'Ivan->1229';
 
 function isValid(str) {
     try {
-        if (!/^[\w\-><.,\/]+$/g.test(str)) {
+        if (!(/^[\w\-><.,\/]+$/g.test(str))) {
             throw new Error('Небезопасный пароль');
         }
         return true;

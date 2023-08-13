@@ -8,6 +8,9 @@ const arr = ["a", "b", "c", "d", "f"].join('').toLowerCase();
 
 function searchLetter(arr) {
     try {
+        for (let i = 0; i < arr.length; i++) {
+            if (!isNaN(arr[i])) throw new Error("В массиве присутствуют числа");
+        }
         const str = 'abcdefghijklmnopqrstuvwxyz';
         const indexStr = str.indexOf(arr[0]);
         const sliceStr = str.slice(indexStr, indexStr + arr.length + 1);
