@@ -11,4 +11,5 @@ btn.addEventListener('click', function () {
 
     tr.innerHTML = inp.value;
     td.appendChild(tr)
+    inp.value = '';
 })
