@@ -12,7 +12,7 @@ btn.addEventListener('click', function () {
     let str = inp.value;
     let new_str = '';
     for (let i = 0; i < str.length; i++) {
-        new_str += str[i].toUpperCase() + '  ';
+        new_str += `${str[i].toUpperCase()}  `;
     }
     div.innerHTML = new_str;
 })  
