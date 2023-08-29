@@ -12,7 +12,7 @@ function isValid(inp) {
 btn.addEventListener('click', function () {
     try {
         const inp = document.querySelector('input');
-        isValid(inp.value);
+        isValid(inp);
         alert(inp.value);
     } catch (error) {
         alert(error.message);

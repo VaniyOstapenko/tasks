@@ -3,16 +3,16 @@
 // Создать функцию doHashtag, заполняющую новый массив из элементов, каждое значение которого имеет вид #name
 
 class Hashtag {
-    n = 5;
     doHashtag(n) {
         let arr = [];
-        for (let i = 0; i < n.length; i++) {
-            arr.push(`#${n}`)
+        for (let i = 0; i < n; i++) {
+            let element = prompt('Введите слово')
+            arr.push('#' + element);
         }
         return arr;
     }
 }
 
 const hashtag = new Hashtag();
-const result = hashtag.doHashtag('vaniy');
+const result = hashtag.doHashtag(5);
 console.log(result);
