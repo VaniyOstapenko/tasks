@@ -12,23 +12,18 @@
 // Если совпадение есть –ошибка. Добавить проверки 
 
 class ServerPost {
-    middLeware(obj) {
+    controller(obj) {
         try {
-            const midd = this.controller(obj);
-            return midd;
+            const serv = this.service(obj);
+            return serv;
         } catch (error) {
             return error.message;
         }
     }
 
-    controller(obj) {
-        const contr = this.service(obj);
-        return contr;
-    }
-
     service(obj) {
-        const serv = this.repository(obj);
-        return serv;
+        const rep = this.repository(obj);
+        return rep;
     }
 
     repository(obj) {
@@ -38,23 +33,17 @@ class ServerPost {
         { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
         { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
         ]
-        const result = [];
-        arr.forEach(function (el) {
-            if (el.label === obj.label) {
-                return result.push(el);
-            } else {
-                return 'ошибка';
-            }
-        })
-        return result;
+        const new_arr = arr.filter((el) => el.label === obj.label)
+        if (new_arr.length) {
+            throw new Error('Такое уже есть');
+        } else {
+            arr.push({ id: obj.label.toLowerCase(), ...obj })
+        }
+        return arr;
     }
 }
 
-const serverPost = new ServerPost();
-const obj = {
-    label: "JavaScript",
-    category: "programmingLanguages",
-    priority: 1
-}
-
-console.log(serverPost.middLeware(obj));
+const serverPost = new ServerPost()
+const obj = JSON.parse(`{ "label": "JavaScript", "category": "programmingLanguages", "priority": 1 }`);
+const result = serverPost.controller(obj);
+console.log(result);
