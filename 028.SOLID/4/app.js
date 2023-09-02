@@ -1,43 +1,42 @@
-// Реализуйте класс DomHtml, который будет взаимодействовать 
-// с DOM по клику на кнопку. Класс содержит 4 метода: 
-// doPlus, doMinus, doMultiply, doDivide
+// Реализуйте класс ServerGetById. Обязательными функциями считаются функции middleware, controller, service, 
+// repository. Цепочка взаимодействия между методами следующая: middleware -> controller -> service -> repository, 
+// где: middleware –функция валидатор controller–функция, принимающая данные. Принимает json service–функция 
+// проверки на то что с repositoryвернулось значение repository–функция, симулирующая БД. Хранит массив данных. 
+// Взаимодействие с этим массивом осуществляется только в repository. Массив находится в приложении 
+// Задание: на вход подается JSON вида: `{ "id": 1 }` Необходимо вывести в консоль найденный элемент массива 
+// по id если таковой имеется. В противном случае бросить исключение. Добавить проверки 
 
-class DomHtml {
-    constructor() {
-        this.doEvent();
+class ServerGetById {
+    controller(obj) {
+        try {
+            const serv = this.service(obj);
+            return serv;
+        } catch (error) {
+            return error.message;
+        }
     }
 
-    doEvent() {
-        const btn = document.querySelector('button')
-        btn.addEventListener('click', () => {
-            const inp1 = document.querySelector('.inp1').value;
-            const inp2 = document.querySelector('.inp2').value;
-            this.doPlus(inp1, inp2);
-            this.doMinus(inp1, inp2);
-            this.doMultiply(inp1, inp2);
-            this.doDivide(inp1, inp2);
-        })
+    service(obj) {
+        const rep = this.repository(obj);
+        return rep;
     }
 
-    doPlus(inp1, inp2) {
-        const plus = document.querySelector('.plus');
-        plus.innerHTML = +inp1 + +inp2;
+    repository(obj) {
+        const arr =
+            [
+                { "id": 1, "name": "Yesenia", "age": 22 },
+                { "id": 2, "name": "Hanna", "age": 22 },
+                { "id": 3, "name": "Stanislau", "age": 25 },
+                { "id": 4, "name": "German", "age": 18 },
+                { "id": 5, "name": "Maria", "age": 27 }
+            ]
+        const res = arr.filter((el) => el.id === obj.id)
+        return res;
     }
 
-    doMinus(inp1, inp2) {
-        const minus = document.querySelector('.minus');
-        minus.innerHTML = +inp1 - +inp2;
-    }
-
-    doMultiply(inp1, inp2) {
-        const multiply = document.querySelector('.multiply');
-        multiply.innerHTML = +inp1 * +inp2;
-    }
-
-    doDivide(inp1, inp2) {
-        const divide = document.querySelector('.divide');
-        divide.innerHTML = +inp1 / +inp2;
-    }
 }
 
-const domHtml = new DomHtml();
+const serverGetById = new ServerGetById();
+const obj = JSON.parse(`{ "id": 1 }`);
+const result = serverGetById.controller(obj);
+console.log(result);
