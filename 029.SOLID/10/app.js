@@ -3,7 +3,7 @@
 class Conversion {
     doDecimalNymber() {
         const num = 101010;
-        return num.toString()
+        return parseInt(num, 2);
     }
 }
 
