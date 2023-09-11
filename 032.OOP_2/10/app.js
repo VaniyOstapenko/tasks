@@ -3,6 +3,7 @@
 // массива вывести сообщение об ошибке красным цветом 
 
 const btn = document.querySelector('button');
+const div = document.querySelector('div');
 const arr = [];
 function isValid(inp) {
     if (!inp) {
@@ -12,7 +13,6 @@ function isValid(inp) {
 btn.addEventListener('click', function () {
     try {
         const inp = document.querySelector('input');
-        const div = document.querySelector('div');
 
         isValid(inp.value)
         arr.push(inp.value);
@@ -20,7 +20,6 @@ btn.addEventListener('click', function () {
         div.style = 'background-color:white';
         inp.value = '';
     } catch (error) {
-        const div = document.querySelector('div');
         div.style = 'background-color:red';
         div.innerHTML = error.message;
     }
