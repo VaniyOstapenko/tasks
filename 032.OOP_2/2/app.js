@@ -2,6 +2,7 @@
 // функцию возвращающую новый массив из элементов, каждое значение которого имеет вид #name. 
 // [“hschool”, “company”] -> [“#hschool”, “#company”]
 
+
 const n = 5;
 
 function doArray(n) {
