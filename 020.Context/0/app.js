@@ -69,3 +69,13 @@
 // }
 
 // console.log(sum(1)(2)(3));
+
+// Перебор массив
+
+// const arr = [1,2,3,4,5];
+
+// const new_arr = arr.reduce(function(sum,el){
+//     return sum * el;
+// },1)
+
+// console.log(new_arr);
