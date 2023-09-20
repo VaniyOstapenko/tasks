@@ -1,4 +1,4 @@
-// //Тренировочный урок контекст
+// //Тренировочный урок
 
 // console.log(this);//window
 
@@ -79,3 +79,22 @@
 // },1)
 
 // console.log(new_arr);
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const new_arr = arr.map(function(el){
+//     if(el%2==0){
+//         return el;
+//     }
+// })
+
+// console.log(new_arr);
+
+// const new_arr = arr.filter(function(el){
+//     if(el%2===0){
+//         return true;
+//     }
+// })
+
+// console.log(new_arr);
+
