@@ -1,10 +1,6 @@
-const btn = document.querySelector('button');
-const arr = [];
-btn.addEventListener('click', function () {
-    const div = document.querySelector('div');
-    const inp = document.querySelector('input');
+const ul = document.querySelector('ul');
 
-    arr.push(inp.value);
-    div.innerHTML = arr;
-    inp.value = '';
+ul.addEventListener('click', function (event) {
+    const div = document.querySelector('div');
+    div.innerHTML = event.target.textContent;
 })
