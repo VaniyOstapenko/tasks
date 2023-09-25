@@ -1,6 +1,11 @@
-const ul = document.querySelector('ul');
+// У вас есть кнопка. После нажатия поменять background.
 
-ul.addEventListener('click', function (event) {
-    const div = document.querySelector('div');
-    div.innerHTML = event.target.textContent;
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function () {
+    btn.style = 'color:red';
+})
+
+btn.addEventListener('dblclick', function () {
+    btn.style = 'color:white';
 })
