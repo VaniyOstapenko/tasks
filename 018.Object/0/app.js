@@ -11,10 +11,8 @@ const obj = {
 const arr = []
 
 for (let key in obj) {
-    if (!isNaN(obj[key])) {
-        arr.push(obj[key] * 2);
-    }else{
-        arr.push('Не число')
+    if (obj[key] % 2 === 1) {
+        arr.push(obj[key]);
     }
 }
 
