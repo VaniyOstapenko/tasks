@@ -1,16 +1,7 @@
-// На входе статичный объект, включающий такие ключи как
-// name, age, birthday, значения ключей –пустые строки. Считать
-// данные с клавиатуры и заполнить объект соответствующими
-// данными. Добавить проверки на ввод
+const obj = {};
 
-const obj = {
-    name: "",
-    age: "",
-    birthday: "",
-  };
-  
-  for (let key in obj) {
-    let a = prompt(`введите значение ${key}`);
-    obj[key] = a;
-  }
-  console.log(obj);
+obj.id = 1;
+obj.name = 'Ivan';
+obj.surname = 'Ostapenko';
+
+console.log(obj);
