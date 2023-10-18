@@ -37,7 +37,8 @@ function updateData(id, name, age) {
 }
 
 function deleteData(id) {
-
+    const new_arr = arr.filter((el) => el.id !== id)
+    return new_arr;
 }
 
-module.exports = { getAllData, getDataById, createData, updateData };
+module.exports = { getAllData, getDataById, createData, updateData, deleteData };

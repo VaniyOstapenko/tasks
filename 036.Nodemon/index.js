@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllData, getDataById, createData, updateData } = require('./service');
+const { getAllData, getDataById, createData, updateData, deleteData } = require('./service');
 const bodyParser = require('body-parser');
 
 const app = express();
