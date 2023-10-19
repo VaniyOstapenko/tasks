@@ -11,8 +11,16 @@ function getAllData() {
 }
 
 function getDataById(id) {
-    const new_arr = arr.filter((el) => el.id == id);
-    return new_arr;
+    try {
+        if (isNaN(id)) {
+            const new_arr = arr.filter((el) => el.id == id);
+            return new_arr;
+        } else {
+            throw new Error('Error id')
+        }
+    } catch (error) {
+        return error.message;
+    }
 }
 
 function createData(name, age) {
