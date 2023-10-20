@@ -15,46 +15,14 @@ const arr =
         { "id": "adobephotoshop", "label": "Adobe Photoshop", "category": "otherSkills", "priority": 2 },
     ]
 
-function getAllEnvironment() {
-    return arr;
+function allElementArr() {
+    return arr
 }
 
-function getEnvironmentById(id) {
-    const filtered = arr.filter((el) => el.id == id);
-    if (filtered.length == 0) throw new Error('Отстутствует id');
-    return filtered;
-}
-
-function createEnvironment(label, category, priority) {
-    const new_arr = arr.filter((el) => el.label == label)
-    if (new_arr.length > 0) throw new Error('Элемент уже существует');
-    const newObj = {
-        id: label.toLowerCase(),
-        label: label,
-        category: category,
-        priority: priority
-    }
-    arr.push(newObj);
-    return arr;
-}
-
-function updateEnvironment(id, label, category, priority) {
-    const new_arr = arr.filter((el) => el.id !== id)
-    if (new_arr.length == arr.length) throw new Error('id not defaund');
-    const newObj = {
-        id: id,
-        label: label,
-        category: category,
-        priority: priority
-    }
-    new_arr.push(newObj);
+function oneElementArr(id) {
+    const new_arr = arr.filter((el) => el.id == id);
+    if (new_arr == 0) throw new Error('Такой id отсутствует')
     return new_arr;
 }
 
-function deleteEnvironment(id) {
-    const new_arr = arr.filter((el) => el.id !== id)
-    if (new_arr.length == arr.length) throw new Error('Элемента с таким id не существует');
-    return new_arr;
-}
-
-module.exports = { getAllEnvironment, getEnvironmentById, createEnvironment, updateEnvironment, deleteEnvironment };
+module.exports = { allElementArr, oneElementArr };
