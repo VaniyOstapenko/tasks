@@ -21,8 +21,40 @@ function allElementArr() {
 
 function oneElementArr(id) {
     const new_arr = arr.filter((el) => el.id == id);
-    if (new_arr == 0) throw new Error('Такой id отсутствует')
+    if (new_arr == 0) throw new Error('id отсутствует')
     return new_arr;
 }
 
-module.exports = { allElementArr, oneElementArr };
+function createElementArr(label, category, priority) {
+    const new_arr = arr.filter((el) => el.label == label)
+    if (new_arr.length > 0) throw new Error('Элемент вналичии');
+    const newObj = {
+        id: label.toLowerCase(),
+        label: label,
+        category: category,
+        priority: priority
+    }
+    arr.push(newObj);
+    return arr;
+}
+
+function updateElementArr(id, label, category, priority) {
+    const new_arr = arr.filter((el) => el.id !== id)
+    if (new_arr.length == arr.length) throw new Error('id не существует');
+    const newObj = {
+        id: id,
+        label: label,
+        category: category,
+        priority: priority
+    }
+    new_arr.push(newObj);
+    return new_arr;
+}
+
+function deleteElementArr(id) {
+    const newArr = arr.filter((el) => el.id !== id);
+    if (newArr.length == arr.length) throw new Error('Элемента не существует');
+    return newArr;
+}
+
+module.exports = { allElementArr, oneElementArr, createElementArr, updateElementArr, deleteElementArr };
