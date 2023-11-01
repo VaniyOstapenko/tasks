@@ -6,9 +6,9 @@ const n = prompt("количество элементов");
 let arr = [];
 
 for (let i = 0; i < n; i++) {
-  let element = prompt("что ты хочешь ввести хозяин");
-  if (!isNaN(element)) {
-    arr.push(element);
+  let res = prompt("что ты хочешь ввести хозяин");
+  if (!isNaN(res)) {
+    arr.push(res);
   }
 }
 
@@ -17,12 +17,3 @@ arr.forEach(function (el) {
   str *= el;
 });
 console.log(str);
-
-// const num = arr.reduce(function (sum, el) {
-//   if (!isNaN(el)) {
-//     return sum * el;
-//   } else {
-//     return "ошибка ввода";
-//   }
-// }, 1);
-// console.log(num);
