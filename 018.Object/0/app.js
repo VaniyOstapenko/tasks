@@ -1,17 +1,15 @@
-// На входе статичный объект, включающий такие ключи как
-// name, age, birthday, значения ключей –пустые строки. Считать
-// данные с клавиатуры и заполнить объект соответствующими
-// данными. Добавить проверки на ввод
+// На входе статичный объект. Необходимо
+// вывести все числовые ключи.
 
 const obj = {
-    name: '',
-    age: '',
-    birthday: ''
-}
-
-for (let key in obj) {
-    const str = prompt('Введите ключи');
-    obj[key] = str;
-}
-
-console.log(obj);
+    1: "Ivan",
+    Surname: "Ostapenko",
+    3: "Igorevich",
+  };
+  
+  for (let key in obj) {
+    if (!isNaN(key)) {
+      console.log(key);
+    }
+  }
+  
