@@ -3,10 +3,10 @@
 // Добавить проверки 123@1@@34 -> 123134
 
 let str = '123@1@@34';
-let resoult = '';
+let result = '';
 for (let i = 0; i < str.length; i++) {
     if (str[i] != '@') {
-        resoult += str[i];
+        result += str[i];
     }
 }
-console.log(resoult);
+console.log(result);
