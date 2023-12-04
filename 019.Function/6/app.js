@@ -6,7 +6,7 @@ const n = prompt("количество элементов массива");
 function searchArr(new_arr) {
   let arr = [];
   for (let i = 0; i < new_arr; i++) {
-    arr.push(prompt("элемент массива"));
+    arr.push(prompt("введите элемент"));
   }
   return arr;
 }

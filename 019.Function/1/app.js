@@ -7,5 +7,5 @@ function sayHello(a, b) {
 const result = sayHello("Иван", "Остапенко");
 console.log(result);
 
-const result_1 = sayHello("Настя", "Паныш");
+const result_1 = sayHello("Роналдо", "Криштиано");
 console.log(result_1);

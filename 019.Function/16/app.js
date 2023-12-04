@@ -9,7 +9,7 @@ const n = prompt("количество элементов массива");
 function doArray(num) {
   let arr = [];
   for (let i = 0; i < num; i++) {
-    arr.push(prompt("элемент массива"));
+    arr.push(prompt("введите элемент"));
   }
   return arr;
 }
