@@ -3,6 +3,7 @@
 const num1: number = +prompt("Введите первое значение");
 const num2: number = +prompt("Введите второе значение");
 
+//1
 if (num1 > num2) {
   console.log(num1);
 } else {
@@ -12,9 +13,11 @@ if (num1 === num2) {
   console.log(`${num1} = ${num2} <- Вы ввели два равных значения`);
 }
 
+//2
 num1 > num2 ? console.log(num1) : console.log(num2);
 num1 == num2
   ? console.log(`${num1} = ${num2} <- Вы ввели два равных значения`)
   : null;
 
+//3
 console.log(num1 > num2 ? num1 : num2);
