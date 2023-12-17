@@ -10,7 +10,19 @@ const arr9: iUser9[] = [
   { name: "height", value: 20 },
 ];
 
-const obj9 = { ...arr9 };
+function test(arr9) {
+  interface iUserObj9 {
+    width: number;
+    height: number;
+  }
 
-console.log(obj9);
-///?????
+  let obj9 = {} as iUserObj9;
+
+  for (let i = 0; i < arr9.length; i++) {
+    obj9[arr9[i].name] = arr9[i].value;
+  }
+
+  return obj9;
+}
+
+console.log(test(arr9));
