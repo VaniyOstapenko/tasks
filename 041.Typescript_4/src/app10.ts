@@ -7,7 +7,7 @@ interface iProd {
 }
 
 class Product {
-  product: iProd[] = [
+  product = [
     {
       price: 10,
       title: "Картофель",
