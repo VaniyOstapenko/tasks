@@ -14,11 +14,11 @@ class ArrayAnalyzer {
   }
 
   getMax() {
-    return Math.max(this.arr);
+    return Math.max(...this.arr);
   }
 
   getMin() {
-    return Math.min(this.arr);
+    return Math.min(...this.arr);
   }
 }
 
