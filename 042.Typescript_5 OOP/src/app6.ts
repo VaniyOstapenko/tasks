@@ -7,17 +7,17 @@ class ArrayAnalyzer {
     this.arr = arr;
   }
 
-  getAverage() {
+  getAverage():number {
     return this.arr.reduce((sum: number, el: number) => {
       return sum + el / this.arr.length;
     }, 0);
   }
 
-  getMax() {
+  getMax():number {
     return Math.max(...this.arr);
   }
 
-  getMin() {
+  getMin():number {
     return Math.min(...this.arr);
   }
 }
