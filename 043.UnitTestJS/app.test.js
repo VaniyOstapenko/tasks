@@ -113,38 +113,68 @@
 
 //5.У вас есть массив строковых значений,состоящий из номеров телефонов. Необходимо вывести значения массива без дубликатов. Добавитьнеобходимые проверки. Написать тест для функции
 
-function isUniq(arr) {
-    const uniqArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] == 'number') return false;
-        if (!uniqArr.includes(arr[i])) uniqArr.push(arr[i]);
+// function isUniq(arr) {
+//     const uniqArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] == 'number') return false;
+//         if (!uniqArr.includes(arr[i])) uniqArr.push(arr[i]);
+//     }
+//     if (!uniqArr.length) return false;
+//     return uniqArr;
+// }
+
+// describe('', () => {
+//     const arr = ['+375292557153', '+375292557153', '+375445674321'];
+//     const arr2 = [3, '+375292557153', '+375445674321'];
+
+//     test('test toHaveLength', () => {
+//         const result = isUniq(arr);
+//         expect(result).toHaveLength(2);
+//     })
+
+//     test('toEqual', () => {
+//         const result = isUniq(arr);
+//         const equal = ['+375292557153', '+375445674321']
+//         expect(result).toEqual(equal);
+//     })
+
+//     test('test toBe false', () => {
+//         const result = isUniq([]);
+//         expect(result).toBeFalsy()
+//     })
+
+//     test('test toBe fasle', () => {
+//         const result = isUniq(arr2);
+//         expect(result).toBeFalsy();
+//     })
+// })
+
+//6.На входе статичный объект. Необходимо посчитать количество пар (ключ: значение) где значение число и вывести количество. Добавить необходимые
+//проверки. Написать тест для функции
+
+function countObj(obj) {
+    let count = 0;
+    for (let key in obj) {
+        if (obj[key] == 'number') return false;
+        obj[key] = count++
     }
-    if (!uniqArr.length) return false;
-    return uniqArr;
+    return count;
 }
 
-describe('', () => {
-    const arr = ['+375292557153', '+375292557153', '+375445674321'];
-    const arr2 = [3, '+375292557153', '+375445674321'];
+describe('test countObj', () => {
+    const obj = {
+        id: 1,
+        age: 29,
+        year: 2024
+    }
 
-    test('test toHaveLength', () => {
-        const result = isUniq(arr);
-        expect(result).toHaveLength(2);
+    test('test toBe countObj', () => {
+        const result = countObj(obj);
+        expect(result).toBe(3)
     })
 
-    test('toEqual', () => {
-        const result = isUniq(arr);
-        const equal = ['+375292557153', '+375445674321']
-        expect(result).toEqual(equal);
-    })
-
-    test('test toBe false', () => {
-        const result = isUniq([]);
-        expect(result).toBeFalsy()
-    })
-
-    test('test toBe fasle', () => {
-        const result = isUniq(arr2);
+    test('test toBe falsy', () => {
+        const result = countObj({});
         expect(result).toBeFalsy();
     })
 })
