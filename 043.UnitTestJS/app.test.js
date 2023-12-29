@@ -152,29 +152,56 @@
 //6.На входе статичный объект. Необходимо посчитать количество пар (ключ: значение) где значение число и вывести количество. Добавить необходимые
 //проверки. Написать тест для функции
 
-function countObj(obj) {
-    let count = 0;
+// function countObj(obj) {
+//     let count = 0;
+//     for (let key in obj) {
+//         if (obj[key] == 'string') return false;
+//         obj[key] = count++
+//     }
+//     return count;
+// }
+
+// describe('test countObj', () => {
+//     const obj = {
+//         id: 1,
+//         age: 29,
+//         year: 2024
+//     }
+
+//     test('test toBe countObj', () => {
+//         const result = countObj(obj);
+//         expect(result).toBe(3)
+//     })
+
+//     test('test toBe falsy', () => {
+//         const result = countObj({});
+//         expect(result).toBeFalsy();
+//     })
+// })
+
+//7.На входе статичный объект. Необходимо числовые значения удвоить на выходе. Написать тест для функции
+
+function sumObj(obj) {
     for (let key in obj) {
-        if (obj[key] == 'number') return false;
-        obj[key] = count++
+        if (typeof obj[key] == 'string') return false;
+        return obj[key] * 2;
     }
-    return count;
 }
 
-describe('test countObj', () => {
+describe('', () => {
     const obj = {
         id: 1,
         age: 29,
         year: 2024
     }
 
-    test('test toBe countObj', () => {
-        const result = countObj(obj);
-        expect(result).toBe(3)
+    test('', () => {
+        const result = sumObj(obj)
+        expect(result).toBe(2, 58, 4048);
     })
 
-    test('test toBe falsy', () => {
-        const result = countObj({});
-        expect(result).toBeFalsy();
+    test('', () => {
+        const result = sumObj({});
+        expect(result).toBeFalsy()
     })
 })
