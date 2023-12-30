@@ -181,27 +181,58 @@
 
 //7.На входе статичный объект. Необходимо числовые значения удвоить на выходе. Написать тест для функции
 
-function sumObj(obj) {
+// function sumObj(obj) {
+//     for (let key in obj) {
+//         if (typeof obj[key] == 'string') return false;
+//         return obj[key] * 2;
+//     }
+// }
+
+// describe('', () => {
+//     const obj = {
+//         id: 1,
+//         age: 29,
+//         year: 2024
+//     }
+
+//     test('', () => {
+//         const result = sumObj(obj)
+//         expect(result).toBe(2, 58, 4048);
+//     })
+
+//     test('', () => {
+//         const result = sumObj({});
+//         expect(result).toBeFalsy()
+//     })
+// })
+
+//8.На входе статичный объект. Необходимо сформировать массив из всeх четных значений объекта. Написать тест для функции
+
+function chetArr(obj) {
+    const arr = [];
     for (let key in obj) {
-        if (typeof obj[key] == 'string') return false;
-        return obj[key] * 2;
+        if (obj[key] % 2 === 0) {
+            if (typeof obj[key] == 'string') return false;
+            arr.push(obj[key]);
+        }
     }
+    return arr;
 }
 
-describe('', () => {
+describe('test chetArr', () => {
     const obj = {
         id: 1,
-        age: 29,
-        year: 2024
+        age: 2,
+        year: 3
     }
 
-    test('', () => {
-        const result = sumObj(obj)
-        expect(result).toBe(2, 58, 4048);
+    test('Возвращает Success', () => {
+        const result = chetArr(obj)
+        expect(result).toStrictEqual([2])
     })
 
-    test('', () => {
-        const result = sumObj({});
-        expect(result).toBeFalsy()
+    test('Вовзращает False', () => {
+        const result = chetArr(['']);
+        expect(result).toBeFalsy();
     })
 })

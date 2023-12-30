@@ -7,7 +7,7 @@ class PasswordGenerator {
             for (let i = 0; i < pwd; i++) {
                 str.push(Math.floor(Math.random() * 10));
             }
-            return str;
+            return str.join('');
         }
     }
 }
