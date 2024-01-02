@@ -3,6 +3,7 @@ import {
   calculateFactorial,
   capitalizeString,
   StringArray,
+  flattenArray,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -67,5 +68,12 @@ describe("test StringArray class", () => {
     const stringArray = new StringArray();
     const result = stringArray.getUniqueWords();
     expect(result).toEqual(["helo", "vania", "hi"]);
+  });
+});
+
+describe("test flattenArray", () => {
+  test("возвращает Success", () => {
+    const result = flattenArray([1, 2, "d", ["a", 4]]);
+    expect(result).toEqual([1, 2, "d", "a", 4]);
   });
 });

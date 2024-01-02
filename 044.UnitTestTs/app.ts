@@ -1,6 +1,8 @@
 //1. Напишите функцию isPalindrome(word: string):boolean, которая принимает слово и возвращает true, если оно является палиндромом
 //(читается одинаково слева направо и справа налево),и false в противном случае.
 
+import { stringify } from "ts-jest";
+
 function isPalindrome(word: string | number): boolean {
   try {
     if (!word) throw new Error("empty");
@@ -79,4 +81,29 @@ class StringArray {
   }
 }
 
-export { isPalindrome, calculateFactorial, capitalizeString, StringArray };
+//4. Напишите функцию flattenArray(array: any[]): any[], которая принимает массив, в котором могут быть вложенные массивы, и возвращает новый
+//массив, в котором все элементы являются плоским списком без вложенности.
+
+function flattenArray(array: any[]): any {
+  try {
+    const arr: (number | string)[] = [];
+    for (let i = 0; i < array.length; i++) {
+      if (typeof array[i] == "number" || typeof array[i] == "string") {
+        arr.push(array[i]);
+      } else {
+        arr.push(...array[i]);
+      }
+    }
+    return arr;
+  } catch (error: any) {
+    return error.message;
+  }
+}
+
+export {
+  isPalindrome,
+  calculateFactorial,
+  capitalizeString,
+  StringArray,
+  flattenArray,
+};
