@@ -100,10 +100,32 @@ function flattenArray(array: any[]): any {
   }
 }
 
+//5. Напишите функцию chunkArray(array: any[], size: number): any[][], которая принимает массив и число size, и возвращает новый массив, разделенный
+//на подмассивы указанного размера.
+
+function chunkArray(array: any[], size: number): any[][] {
+  try {
+    let newArr: any[] = [];
+    let sonArr: any[] = [];
+    for (let i = 0; i < array.length; i++) {
+      sonArr.push(array[i]);
+      if (sonArr.length == size) {
+        newArr.push(sonArr);
+        sonArr = [];
+      }
+    }
+    if (sonArr.length !== 0) newArr.push(sonArr);
+    return newArr;
+  } catch (error: any) {
+    return error.message;
+  }
+}
+
 export {
   isPalindrome,
   calculateFactorial,
   capitalizeString,
   StringArray,
   flattenArray,
+  chunkArray,
 };

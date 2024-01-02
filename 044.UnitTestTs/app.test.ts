@@ -4,6 +4,7 @@ import {
   capitalizeString,
   StringArray,
   flattenArray,
+  chunkArray,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -75,5 +76,13 @@ describe("test flattenArray", () => {
   test("возвращает Success", () => {
     const result = flattenArray([1, 2, "d", ["a", 4]]);
     expect(result).toEqual([1, 2, "d", "a", 4]);
+  });
+});
+
+describe("test chunkArray function", () => {
+  test("возвращает Success", () => {
+    let size = 5;
+    const result = chunkArray([1, 2, 3, 4, 5, 6], size);
+    expect(result).toEqual([[1, 2, 3, 4, 5], [6]]);
   });
 });
