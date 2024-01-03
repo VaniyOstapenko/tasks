@@ -121,6 +121,19 @@ function chunkArray(array: any[], size: number): any[][] {
   }
 }
 
+//6.Напишите функцию findMissingNumber(numbers: number[]): number, которая принимает массив чисел, в котором пропущено одно число из
+//последовательности, и возвращает пропущенное число.
+
+function findMissingNumber(numbers: number[]): number {
+  let res: number = 0;
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] !== numbers[i - 1] + 1) {
+      res += numbers[i - 1] + 1;
+    }
+  }
+  return res;
+}
+
 export {
   isPalindrome,
   calculateFactorial,
@@ -128,4 +141,5 @@ export {
   StringArray,
   flattenArray,
   chunkArray,
+  findMissingNumber,
 };

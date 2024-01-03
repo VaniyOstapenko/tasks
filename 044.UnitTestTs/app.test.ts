@@ -5,6 +5,7 @@ import {
   StringArray,
   flattenArray,
   chunkArray,
+  findMissingNumber,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -84,5 +85,12 @@ describe("test chunkArray function", () => {
     let size = 5;
     const result = chunkArray([1, 2, 3, 4, 5, 6], size);
     expect(result).toEqual([[1, 2, 3, 4, 5], [6]]);
+  });
+});
+
+describe("test findMissingNumber function", () => {
+  test("test get findMissingNumber", () => {
+    const res = findMissingNumber([1, 2, 3, 4, 5, 7, 8, 9, 10]);
+    expect(res).toBe(6);
   });
 });
