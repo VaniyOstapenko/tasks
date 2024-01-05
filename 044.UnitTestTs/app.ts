@@ -134,6 +134,32 @@ function findMissingNumber(numbers: number[]): number {
   return res;
 }
 
+//7.Напишите функцию findPairWithSum(numbers: number[], targetSum: number): [number, number] | null, которая принимает массив чисел и целевую сумму, и возвращает
+//пару чисел из массива, сумма которых равна целевой сумме. Если такая пара не найдена,функция должна возвращать null.
+
+function findPairWithSum(
+  numbers: number[],
+  targetSum: number
+): [number, number] | null {
+  try {
+    if (!numbers.length) throw new Error("empty");
+
+    let result: [number, number] | null = null;
+
+    for (let i = 0; i < numbers.length; i++) {
+      for (let j = 0; j < numbers.length; j++) {
+        if (numbers[i] + numbers[j] == targetSum) {
+          result = [numbers[i], numbers[j]];
+        }
+      }
+    }
+
+    return result;
+  } catch (error) {
+    return error.message;
+  }
+}
+
 export {
   isPalindrome,
   calculateFactorial,
@@ -142,4 +168,5 @@ export {
   flattenArray,
   chunkArray,
   findMissingNumber,
+  findPairWithSum,
 };

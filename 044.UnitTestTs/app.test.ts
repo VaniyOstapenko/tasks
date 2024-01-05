@@ -6,6 +6,7 @@ import {
   flattenArray,
   chunkArray,
   findMissingNumber,
+  findPairWithSum,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -92,5 +93,17 @@ describe("test findMissingNumber function", () => {
   test("test get findMissingNumber", () => {
     const res = findMissingNumber([1, 2, 3, 4, 5, 7, 8, 9, 10]);
     expect(res).toBe(6);
+  });
+});
+
+describe("test findPairWithSum", () => {
+  test("test tobe findPairWithSum", () => {
+    const res = findPairWithSum([1, 2, 3, 4, 5], 5);
+    expect(res).toEqual([4, 1]);
+  });
+
+  test("return empty", () => {
+    const res = findPairWithSum([], 5);
+    expect(res).toBe("empty");
   });
 });
