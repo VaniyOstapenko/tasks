@@ -160,6 +160,29 @@ function findPairWithSum(
   }
 }
 
+//9.Создайте класс NumberArray, который имеет свойство array(массив чисел) и методы: getSum(): number-возвращает сумму всех чисел в массиве.
+// getEvenNumbers(): number[] -возвращает массив только четных чисел из массива.
+
+class NumberArray {
+  array: number[] = [1, 2, 3, 4, 5];
+
+  getSum(): any {
+    const arr = this.array.reduce((sum: number, el: number) => {
+      return sum + el;
+    }, 0);
+    return arr;
+  }
+
+  getEvenNumbers(): any {
+    const arr = this.array.filter((el: number) => {
+      if (el % 2 == 0) {
+        return true;
+      }
+    });
+    return arr;
+  }
+}
+
 export {
   isPalindrome,
   calculateFactorial,
@@ -169,4 +192,5 @@ export {
   chunkArray,
   findMissingNumber,
   findPairWithSum,
+  NumberArray,
 };

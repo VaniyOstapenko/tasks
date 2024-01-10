@@ -7,6 +7,7 @@ import {
   chunkArray,
   findMissingNumber,
   findPairWithSum,
+  NumberArray,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -105,5 +106,19 @@ describe("test findPairWithSum", () => {
   test("return empty", () => {
     const res = findPairWithSum([], 5);
     expect(res).toBe("empty");
+  });
+});
+
+describe("test NumberArray class", () => {
+  test("success", () => {
+    const numberArray = new NumberArray();
+    const result = numberArray.getSum();
+    expect(result).toBe(15);
+  });
+
+  test("success", () => {
+    const numberArray = new NumberArray();
+    const result = numberArray.getEvenNumbers();
+    expect(result).toEqual([2, 4]);
   });
 });
