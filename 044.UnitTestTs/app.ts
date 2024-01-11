@@ -183,6 +183,47 @@ class NumberArray {
   }
 }
 
+//10.Создайте класс PersonArray, который имеет свойство array (массив объектов Person) и методы: getNames(): string[] -возвращает массив имен
+//всех людей. getAdults(): Person[] -возвращает массив только совершеннолетних людей. getAverageAge(): number -возвращает средний
+//возраст всех людей.
+
+interface iPerson {
+  id: number;
+  name: string;
+  age: number;
+}
+
+class PersonArray {
+  array: iPerson[] = [
+    { id: 1, name: "Ivan", age: 29 },
+    { id: 1, name: "Anton", age: 31 },
+    { id: 1, name: "Daria", age: 19 },
+  ];
+  getNames(): string[] {
+    const newArr: string[] = [];
+    for (let i = 0; i < this.array.length; i++) {
+      newArr.push(this.array[i].name);
+    }
+    return newArr;
+  }
+
+  getAdults(): iPerson[] {
+    const newArr = this.array.filter((el: iPerson) => {
+      if (el.age > 18) {
+        return true;
+      }
+    });
+    return newArr;
+  }
+
+  getAverageAge(): number {
+    const newArr = this.array.reduce((sum: number, el: iPerson) => {
+      return sum + el.age;
+    }, 0);
+    return Math.floor(newArr / this.array.length);
+  }
+}
+
 export {
   isPalindrome,
   calculateFactorial,
@@ -193,4 +234,5 @@ export {
   findMissingNumber,
   findPairWithSum,
   NumberArray,
+  PersonArray,
 };

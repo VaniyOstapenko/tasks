@@ -8,6 +8,7 @@ import {
   findMissingNumber,
   findPairWithSum,
   NumberArray,
+  PersonArray,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -120,5 +121,29 @@ describe("test NumberArray class", () => {
     const numberArray = new NumberArray();
     const result = numberArray.getEvenNumbers();
     expect(result).toEqual([2, 4]);
+  });
+});
+
+describe("success", () => {
+  test("test getNames function", () => {
+    const personArray = new PersonArray();
+    const result = personArray.getNames();
+    expect(result).toEqual(["Ivan", "Anton", "Daria"]);
+  });
+
+  test("test getAdults function", () => {
+    const personArray = new PersonArray();
+    const result = personArray.getAdults();
+    expect(result).toEqual([
+      { id: 1, name: "Ivan", age: 29 },
+      { id: 1, name: "Anton", age: 31 },
+      { id: 1, name: "Daria", age: 19 },
+    ]);
+  });
+
+  test("test  getAverageAge function", () => {
+    const personArray = new PersonArray();
+    const result = personArray.getAverageAge();
+    expect(result).toBe(26);
   });
 });
