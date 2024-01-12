@@ -224,6 +224,27 @@ class PersonArray {
   }
 }
 
+//11.Создайте класс StringManipulator, который имеет свойство text (строка) и методы: getCharacterCount(): number -возвращает количество
+//символов в тексте. getWords(): string[] -возвращает массив слов из текста. getReversedText(): string -возвращает текст в обратном порядке.
+
+class StringManipulator {
+  text: string = "Hello How are you?";
+
+  getCharacterCount(): number {
+    return this.text.length;
+  }
+
+  getWords(): string[] {
+    const arr: string[] = this.text.split(" ");
+    return arr;
+  }
+
+  getReversedText(): string {
+    const arr: string = this.text.split(" ").reverse().join(" ");
+    return arr;
+  }
+}
+
 export {
   isPalindrome,
   calculateFactorial,
@@ -235,4 +256,5 @@ export {
   findPairWithSum,
   NumberArray,
   PersonArray,
+  StringManipulator
 };

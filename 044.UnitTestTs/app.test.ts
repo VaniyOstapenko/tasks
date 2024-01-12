@@ -9,6 +9,7 @@ import {
   findPairWithSum,
   NumberArray,
   PersonArray,
+  StringManipulator,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -145,5 +146,25 @@ describe("success", () => {
     const personArray = new PersonArray();
     const result = personArray.getAverageAge();
     expect(result).toBe(26);
+  });
+});
+
+describe("success", () => {
+  test("test getCharacterCount function", () => {
+    const stringManipulator = new StringManipulator();
+    const result = stringManipulator.getCharacterCount();
+    expect(result).toBe(18);
+  });
+
+  test("text  getWords function", () => {
+    const stringManipulator = new StringManipulator();
+    const result = stringManipulator.getWords();
+    expect(result).toEqual(["Hello", "How", "are", "you?"]);
+  });
+
+  test("text   getReversedText function", () => {
+    const stringManipulator = new StringManipulator();
+    const result = stringManipulator.getReversedText();
+    expect(result).toBe("you? are How Hello");
   });
 });
