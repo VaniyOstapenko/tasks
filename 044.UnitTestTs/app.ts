@@ -245,6 +245,21 @@ class StringManipulator {
   }
 }
 
+//12.Реализуйте функцию, которая принимает в качестве параметра строку и возвращает массив без каких-либо элементов с одинаковым значением рядом
+//друг с другом. Написать тест для функции 'AAAABBBCCDAABBB-> ['A', 'B', 'C', 'D', 'A', 'B’] 'ABBCcAD’ -> ['A', 'B', 'C', 'c', 'A', 'D’] '12233’
+//-> [1, 2, 3] Написать тест для функции
+
+function repeatStr(str: string) {
+  const newStr: string[] = str.split("");
+  const arr: string[] = [];
+  for (let i = 0; i < newStr.length; i++) {
+    if (newStr[i] !== newStr[i - 1]) {
+      arr.push(newStr[i]);
+    }
+    return arr;
+  }
+}
+
 export {
   isPalindrome,
   calculateFactorial,
@@ -256,5 +271,6 @@ export {
   findPairWithSum,
   NumberArray,
   PersonArray,
-  StringManipulator
+  StringManipulator,
+  repeatStr,
 };

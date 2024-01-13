@@ -10,6 +10,7 @@ import {
   NumberArray,
   PersonArray,
   StringManipulator,
+  repeatStr,
 } from "./app";
 
 describe("test isPalindrom function", () => {
@@ -166,5 +167,13 @@ describe("success", () => {
     const stringManipulator = new StringManipulator();
     const result = stringManipulator.getReversedText();
     expect(result).toBe("you? are How Hello");
+  });
+});
+
+describe("success", () => {
+  test("test repeatStr function", () => {
+    const str: string = "AABBCCCDDE";
+    const result = repeatStr(str);
+    expect(result).toEqual(["A", "B", "C", "D", "E"]);
   });
 });
