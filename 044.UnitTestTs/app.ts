@@ -256,8 +256,8 @@ function repeatStr(str: string) {
     if (newStr[i] !== newStr[i - 1]) {
       arr.push(newStr[i]);
     }
-    return arr;
   }
+  return arr;
 }
 
 export {
