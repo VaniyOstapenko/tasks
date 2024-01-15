@@ -125,13 +125,17 @@ function chunkArray(array: any[], size: number): any[][] {
 //последовательности, и возвращает пропущенное число.
 
 function findMissingNumber(numbers: number[]): number {
-  let res: number = 0;
-  for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] !== numbers[i - 1] + 1) {
-      res += numbers[i - 1] + 1;
+  try {
+    let res: number = 0;
+    for (let i = 1; i < numbers.length; i++) {
+      if (numbers[i] !== numbers[i - 1] + 1) {
+        res += numbers[i - 1] + 1;
+      }
     }
+    return res;
+  } catch (error: any) {
+    return error.message;
   }
-  return res;
 }
 
 //7.Напишите функцию findPairWithSum(numbers: number[], targetSum: number): [number, number] | null, которая принимает массив чисел и целевую сумму, и возвращает
@@ -250,14 +254,18 @@ class StringManipulator {
 //-> [1, 2, 3] Написать тест для функции
 
 function repeatStr(str: string) {
-  const newStr: string[] = str.split("");
-  const arr: string[] = [];
-  for (let i = 0; i < newStr.length; i++) {
-    if (newStr[i] !== newStr[i - 1]) {
-      arr.push(newStr[i]);
+  try {
+    const newStr: string[] = str.split("");
+    const arr: string[] = [];
+    for (let i = 0; i < newStr.length; i++) {
+      if (newStr[i] !== newStr[i - 1]) {
+        arr.push(newStr[i]);
+      }
     }
+    return arr;
+  } catch (error: any) {
+    return error.message;
   }
-  return arr;
 }
 
 export {
