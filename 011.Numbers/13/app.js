@@ -3,12 +3,12 @@
 // если < 0, то вывести ‘Отрицательное’, если > 0, 
 // то вывести ‘Положительное’
 
-let a = +prompt('ввести значение');
+const n = 5;
 
-if(a===0){
-    console.log(a=0);
-}else if(a<0){
-    console.log('отрицательное')
-}else if(a>0){
-    console.log('положительное');
+if (n == 0) {
+    console.log('Ноль');
+} else if (n < 0) {
+    console.log('Отрицателное');
+} else if (n > 0) {
+    console.log('Положительное');
 }

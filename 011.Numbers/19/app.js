@@ -19,8 +19,8 @@ if (a + b + c === 0) {
     console.log('нет действительных корней');
 } else if (D > 0) {
     if (x1 > x2) {
-        console.log(`${ x2 }, ${ x1 }`);
+        console.log(`${x2}, ${x1}`);
     } else {
-        console.log(`${ x1 }, ${ x2 }`);
+        console.log(`${x1}, ${x2}`);
     }
 }

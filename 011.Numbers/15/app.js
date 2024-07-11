@@ -5,14 +5,12 @@
 // от 41 до 100 –зрелость, 
 // в противном случае –некорректный ввод
 
-let a = +prompt('введите значение');
+const n = +prompt('Введите значение');
 
-if (a === 0, a < 19) {
-    console.log('детство');
-} else if (a === 19, a < 41) {
-    console.log('молодость')
-} else if (a === 41, a < 101) {
-    console.log('зрелость');
-} else if(a>100){
-    console.log('некорректный ввод');
+if (n >= 0 && n <= 18) {
+    console.log('Детство');
+} else if (n >= 19 && n <= 40) {
+    console.log('Молодость');
+} else if (n >= 41 && n <= 100) {
+    console.log('Зрелость');
 }
