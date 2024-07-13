@@ -3,14 +3,14 @@
 //  ax2 + bx + c = 0 
 //  Если уравнение имеет два корня, то следует вывести их в порядке возрастания.
 
-let a = +prompt('введите значение');
-let b = +prompt('введите значение');
-let c = +prompt('введите значение');
+const a = +prompt('введите значение');
+const b = +prompt('введите значение');
+const c = +prompt('введите значение');
 
 const D = b ** 2 - 4 * a * c;
 
-let x1 = (-b + Math.sqrt(D)) / (2 * a);
-let x2 = (-b - Math.sqrt(D)) / (2 * a);
+const x1 = (-b + Math.sqrt(D)) / (2 * a);
+const x2 = (-b - Math.sqrt(D)) / (2 * a);
 
 
 if (a + b + c === 0) {
