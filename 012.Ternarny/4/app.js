@@ -3,12 +3,12 @@
 // Если число, вывести true, 
 // в противном случае false (isNaN)
 
-let a = prompt('введите число');
+const n = prompt('Введите число')
 
-if (isNaN(a)) {
-    console.log(false);
-} else {
-    console.log(true);
-}
+// if (!isNaN(n)) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
 
-console.log(isNaN(a) ? false : true);
+!isNaN(n) ? console.log(true) : console.log(false);

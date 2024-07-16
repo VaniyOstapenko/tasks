@@ -4,16 +4,6 @@
 // В противном случае необходимо округлить число до целых. 
 // Добавить проверку на ввод только чисел
 
-let a = prompt('введите число');
+const n = 16;
 
-if (isNaN(a)) {
-    console.log(`ошибка`);
-} else {
-    a = Number(a)
-    let b = Math.sqrt(a);
-    if (Number.isInteger(b)) {
-        console.log(b);
-    } else {
-        console.log(Math.round(b));
-    }
-}
+console.log(Math.floor(Math.sqrt(n)));

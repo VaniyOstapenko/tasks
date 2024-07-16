@@ -2,31 +2,31 @@
 // соответствующее дню недели.
 //  Необходимо вывести день для введенного числа. 1 -> Понедельник
 
-let a = +prompt('введите число от 1 до 7');
+const n = +prompt('Введите число от 1 до 7')
 
-switch (a) {
+switch (n) {
     case 1:
-        console.log('понедельник');
-        break
+        console.log('Понедельник');
+        break;
     case 2:
-        console.log('вторник');
-        break
+        console.log('Вторник');
+        break;
     case 3:
-        console.log('среда');
-        break
+        console.log('Среда');
+        break;
     case 4:
-        console.log('четверг');
-        break
+        console.log('Четверг');
+        break;
     case 5:
-        console.log('пятница');
-        break
+        console.log('Пятница');
+        break;
     case 6:
-        console.log('суббота');
-        break
+        console.log('Суббота');
+        break;
     case 7:
-        console.log('воскресенье');
-        break
+        console.log('Воскресенье');
+        break;
     default:
-        console.log('ошибка ввода');
-        break
+        console.log('Вы ввели число не в нужно диапозоне');
+        break;
 }

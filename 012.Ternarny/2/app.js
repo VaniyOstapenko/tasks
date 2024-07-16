@@ -1,13 +1,17 @@
 // Выявить является ли введенное число четным
 
-let a = +prompt('введите число');
+// const n = 5;
 
-if (a % 2 === 0) {
-    console.log('чётное');
-} else {
-    console.log('нечётное');
+// if (n % 2 == 0) {
+//     console.log('Чётное');
+// } else {
+//     console.log('Нечётное');
+// }
+
+// n % 2 == 0 ? console.log('Чётное') : console.log('Нечётное');
+
+function show(n) {
+    return n % 2 == 0 ? 'Чётное' : 'Нечётное'
 }
 
-a % 2 === 0 ? console.log('чётное') : console.log('нечётное');
-
-console.log(a % 2 === 0 ? 'чётное' : 'нечётное');
+console.log(show(5));

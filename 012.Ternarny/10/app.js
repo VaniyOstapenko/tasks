@@ -6,9 +6,9 @@
 // существует». Добавить проверку на ввод 
 // только чисел
 
-const a = prompt('введите число');
+const a = 4;
 
-if (isNaN(a)) {
+if (typeof (a) == 'string') {
     console.log('ошибка ввода');
 } else {
     if (a != 0) {

@@ -4,14 +4,13 @@
 // Например, "Число " + num + " положительное".
 // Добавить проверку на число
 
-let a = prompt('введите число');
+const n = +prompt('Введите число');
 
-if (isNaN(a)) {
-    console.log('ошибка');
-} else {
-    if (a > 0) {
-        alert(`положительное, количество цифр= ${a.length}`);
-    } else {
-        alert(`отрицательное, количество цифр= ${a.length-1}`)
-    }
+if (n > 0 && !isNaN(n)) {
+    console.log(`${String(n).length} ${n} Положительное`);
+} else if (isNaN(n)) {
+    console.log('Вы ввели строку');
+}
+else {
+    console.log(`Отрицательное ${n}`);
 }

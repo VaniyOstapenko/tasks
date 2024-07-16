@@ -4,12 +4,11 @@
 // только чисел 
 // 345 -> 3 100 -> 1
 
-let a = prompt('введите сантиметры');
-let x = a / 100;
+const a = 345;
 
 if (isNaN(a)) {
     console.log('ошибка ввода');
 } else {
-    console.log(x);
+    console.log(a / 100);
 }
 
