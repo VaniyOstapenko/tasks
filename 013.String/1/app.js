@@ -6,11 +6,12 @@
 // элемент массива ‘hschool’ 
 // => [‘h’, ‘s’, ‘c’, ‘h’, ‘o’, ‘o’, ‘l’]
 
-let a = prompt('введите текст');
+const str = prompt('Введите значение');
 
-if (isNaN(a)) {
-    console.log(a.split(''));
+if (isNaN(str)) {
+    console.log(str.split(''));
+} else if (str % 2 == 0) {
+    console.log('Чётное');
 } else {
-    console.log(+a % 2 === 0 ? 'чётное' : 'не чётное');
+    console.log('Нечётное');
 }
-

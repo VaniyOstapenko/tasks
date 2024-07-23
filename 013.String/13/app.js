@@ -1,6 +1,6 @@
 // Пользователь вводит дату в формате 'xxxx-xx-xx'. 
 // Преобразуйте эту дату в формат 'xx.xx.xxxx'.
 
-let a = prompt('введите дату в формате "xxxx-xx-xx"')
+const date = '1994-12-29';
 
-console.log(a.split('-').reverse().join('.'));
+console.log(date.split('-').join('.'));

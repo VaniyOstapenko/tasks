@@ -2,6 +2,10 @@
 // Если он начинается с http, содержит хотя бы один “/” и 
 // заканчивается подстрокой .com или .ru, то вывести true, в противном случае false
 
-let url = prompt('введите ссылку');
+const str = 'http://www.yootube.com';
 
-console.log(url.includes('http') || url.includes('/') || url.includes('.com') || url.includes('.ru'));
+if (str.includes('http') || str.includes('/') || str.includes('.com') || str.includes('.ru')) {
+    console.log(true);
+} else {
+    console.log(false);
+}

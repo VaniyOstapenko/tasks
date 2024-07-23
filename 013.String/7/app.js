@@ -1,14 +1,8 @@
 // На вход программе подаётся строка. 
 // Замените все @ на '!' (2 способа)
 
-let a = prompt();
+const str = 'vania@mail.com'
 
-if (isNaN(a)) {
-    console.log(a.replaceAll('@', '!'));
-} else {
-    console.log('ошибка');
-}
+console.log(str.replaceAll('@', '!'));
 
-console.log(isNaN(a) ? a.replaceAll('@', '!') : 'ошибка');
-
-console.log(isNaN(a) ? a.split('@').join('!') : 'ошибка');
+console.log(str.split('@').join('!'));

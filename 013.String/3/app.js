@@ -4,12 +4,10 @@
 // Привести к одному регистру, убрать 
 // лишние пробелы
 
-let a = prompt('введите строку').trim().toLowerCase();
+const str = '     Hello worlD my Name is Vania  '.toLowerCase().trimEnd().trimStart();
 
-if (!isNaN(a)) {
-    console.log('ошибка')
+if (isNaN(str)) {
+    console.log(`Длина строки: ${str.length} ${str}`);
 } else {
-    console.log(a.length);
+    console.log('Ошибка ввода');
 }
-
-console.log(!isNaN(a) ? 'ошибка' : a.length);

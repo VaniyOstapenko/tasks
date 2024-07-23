@@ -3,8 +3,8 @@
 // этой строке. •Вырежите из нее 2 и 3 слова. 
 // •Найдите индекс 2 подстроки
 
-let str = 'Full stack Developer';
+const str = 'hello my friend';
 
 console.log(str.length);
-console.log(str.slice(str.indexOf('s')));
-console.log(str.indexOf('s'));
+console.log(str.slice(6, 50));
+console.log(str.indexOf('my'));

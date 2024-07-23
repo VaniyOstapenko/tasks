@@ -1,7 +1,6 @@
 // ‘HTML JavaScript PHP’ 
 // преобразовать в "HTML-JAVASCRIPT-PHP"
 
-let a = 'HTML JavaScript PHP'.toUpperCase();
-console.log(a.split(' ').join('-'));
+const str = 'HTML JavaScript PHP'
 
-console.log(a.replaceAll(' ', '-'));
+console.log(str.replaceAll(' ', '-').toUpperCase());

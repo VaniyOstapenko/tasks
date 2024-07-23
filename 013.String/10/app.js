@@ -4,6 +4,10 @@
 // Добавить проверку на ввод только 
 // текстовых значений
 
-let a = prompt('введите текст').trim().toLowerCase();
+const str = 'Hello '.trim();
 
-console.log(isNaN(a) ? a.repeat(3) : 'error');
+if (isNaN(str)) {
+    console.log(str.repeat(3).toLowerCase());
+} else {
+    console.log('Введите текстовое значение');
+}

@@ -1,8 +1,6 @@
 // Пользователь вводит дату в формате ‘х-х-х'. 
 // Замените все дефисы на '!' 
 
-let a = prompt('ввести дату в формате "x-x-x"');
+const date = '29-12-94';
 
-console.log(a.split('-').join('!'));
-
-console.log(a.replaceAll('-','!'));
+console.log(date.replaceAll('-', '!'));

@@ -3,12 +3,10 @@
 // что строка заканчивается подстрокой .com или .ru. 
 // Если правильно заканчивается, то вывести true, в противном случае false
 
-let email = prompt('введите строку');
+const str = 'vania.com';
 
-if (email.includes('.com') || email.includes('.ru')) {
+if (str.includes('.com') || str.includes('.ru')) {
     console.log(true);
-}else{
+} else {
     console.log(false);
 }
-
-console.log(email.includes('.com') || email.includes('.ru')? true : false);

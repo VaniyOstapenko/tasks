@@ -1,7 +1,6 @@
 // Преобразовать строку‘    Full StaCKDevELoper’в 
 // массив вида[‘full, ‘stack’, ‘developer’]
 
-let a = '    Full StaCK DevELoper'.toLowerCase().trim();
+const str = '    Full StaCK DevELoper '
 
-console.log(a.split(' '));
-
+console.log(str.toLowerCase().trim().split(' '));

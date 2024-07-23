@@ -4,12 +4,10 @@
 // поставить в верхний регистр. 
 // Убрать лишние пробелы
 
-let a = prompt('ввести строку').trim();
+const str = '  world hello        '.trim();
 
-// if (!isNaN(a)) {
-//     console.log('ошибка ввода');
-// } else {
-//     console.log(a[0].toUpperCase() + a.slice(1));
-// }
-
-console.log(!isNaN(a) ? 'ошибка ввода' : a[0].toUpperCase() + a.slice(1));
+if (isNaN(str)) {
+    console.log(str[0].toUpperCase() + str.slice(1));
+} else {
+    console.log('Ошибка ввода');
+}
