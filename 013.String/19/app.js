@@ -2,13 +2,14 @@
 // состоящая из слов, разделенных ровно одним пробелом. 
 // Напишите программу, которая подсчитывает количество слов в ней
 
-let a = prompt('введите текст').split(' ');
+const str = 'Привет Ваня'.split(' ');
 
 let count = 0;
 
-for (let i = 0; i < a.length; i++) {
-    if (a[i]) 
-    count += 1
+for (let i = 0; i < str.length; i++) {
+    if (str[i]) {
+        count += 1;
+    }
 }
 
 console.log(`${count} - количество слов`);

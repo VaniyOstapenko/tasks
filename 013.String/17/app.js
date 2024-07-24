@@ -3,9 +3,9 @@
 // Текст хороший, если содержит подстроку «хорош» во всевозможных регистрах. 
 // я очень хороший текст => true
 
-let a = prompt('введите текст');
+const str = 'Строка хорошая';
 
-if (a.includes('хорош')) {
+if (str.includes('хорош')) {
     console.log(true);
 } else {
     console.log(false);
