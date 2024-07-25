@@ -2,7 +2,6 @@
 //внутри этой строи спец знаки. Слова между символами перевернуть
 
 
-const newStr = 'Vania@Hi&How%Are*You';
-const reversedWords = newStr.replace(/[A-Za-z]+/g, word => word.split('').reverse().join(''));
+const str = 'Vania@Hi&How%Are*You';
 
-console.log(reversedWords);
+console.log(str.replace(/[A-Za-z]+/g, newStr => newStr.split('').reverse().join('')));

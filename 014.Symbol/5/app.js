@@ -4,6 +4,6 @@
 // https://www.instagram.com/hschool.official/-> 
 // www.instagram.com/hschool.official/
 
-let a = 'https://www.instagram.com/hschool.official/';
+let str = 'https://www.instagram.com/hschool.official/';
 
-console.log(a.slice(a.indexOf('/')+2));
+console.log(str.slice(str.indexOf('/') + 2));

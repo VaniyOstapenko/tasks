@@ -1,6 +1,6 @@
 // Подается строка из нескольких слов. Необходимо добавить тире между словами 
 
-let str = 'how are you?'
+const str = 'Vania Hi'
 
 console.log(str.split(' ').join('-'));
-
+console.log(str.replaceAll(' ', '-'));
