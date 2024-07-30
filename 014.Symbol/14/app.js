@@ -1,9 +1,9 @@
 // На вход подается строка в виде электронной почты. 
 // Если строка содержит “@”и оканчивается на .com, .ru, то вывести true, иначе false
 
-let a = prompt('введите строку');
+const str = 'ostapenkovania@mail.com';
 
-if (a.includes('@') && (a.includes('.com') || a.includes('.ru'))) {
+if (str.includes('@') && (str.includes('.com') || str.includes('.ru'))) {
     console.log(true);
 } else {
     console.log(false);

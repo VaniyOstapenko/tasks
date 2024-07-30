@@ -2,10 +2,10 @@
 // Необходимо преобразовать каждое предложение в хештег. 
 // Добавить проверку на ввод текстовых значений hSСhOol СomPAnY-> #hschoolcompany
 
-let a = prompt('ввод').toLowerCase().trim();
+let str = 'hSСhOol СomPAnY'.toLowerCase().trim();
 
 if (!isNaN) {
     console.log('ошибка');
 } else {
-    console.log('#' + a.split(' ').join(''));
+    console.log('#' + str.split(' ').join(''));
 }

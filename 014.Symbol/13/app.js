@@ -4,15 +4,15 @@
 // 53 -> 8
 // 135 -> 9
 
-let a = prompt('введите значение');
+const str = '53';
 
 let result = 0;
 
-if (!isNaN(a)) {
-    for (let i = 0; i < a.length; i++) {
-        result += +a[i];
+if (!isNaN(str)) {
+    for (let i = 0; i < str.length; i++) {
+        result += +str[i];
     }
     console.log(result);
-}else{
+} else {
     console.log('error');
 }

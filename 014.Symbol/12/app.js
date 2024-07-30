@@ -2,3 +2,10 @@
 // Если значение больше 2-х и меньше 11-ти или больше или равна 26-ти 
 // и меньше 30-ти, то выведите 'Верно', в противном случае выведите 'Неверно'.
 
+const str = 'hello';
+
+if (str.length > 2 && str.length < 11 || str.length >= 26 && str.length < 30) {
+    console.log(true);
+} else {
+    console.log(false);
+}
