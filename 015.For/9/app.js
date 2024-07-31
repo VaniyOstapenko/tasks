@@ -4,10 +4,10 @@
 // размерами n×10 несколькими способами. 
 // 2 -> ********** **********
 
-let n = 7;
+const n = 7;
 
-for (let i = 1; i <=n; i++){
-    console.log('*'.repeat(10));
+for (let i = 0; i <= n; i++) {
+    console.log('*'.repeat(n));
 }
 
-console.log('*'.repeat(10));
+console.log('*'.repeat(7));

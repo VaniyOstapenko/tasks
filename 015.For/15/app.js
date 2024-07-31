@@ -7,12 +7,11 @@
 // цикла. Если нет -ничего делать не 
 // надо
 
-let a = [1, 2, 5, 9, 4, 13, 4, 10];
+const arr = [1, 2, 5, 9, 4, 13, 4, 10];
 
-for (let i = 0; i < a.length; i++) {
-    if (a[i] === 4) {
-        console.log('есть');
-        break
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 4) {
+        console.log('Есть');
+        break;
     }
 }
-

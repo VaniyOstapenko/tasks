@@ -1,11 +1,10 @@
 // Преобразуйте первую букву каждого 
 // слова строки в верхний регистр.
 
-let a = 'i am developer'.split(' ');
-
-let b = '';
-
-for (let i = 0; i < a.length; i++) {
-    b += a[i][0].toUpperCase()+a[i].slice(1)+' ';
+const str = 'i am vania'.split(' ');
+let newStr = ''
+for (let i = 0; i < str.length; i++) {
+    newStr += str[i][0].toUpperCase() + str[i].slice(1) + ' '
 }
-console.log(b);
+
+console.log(newStr);

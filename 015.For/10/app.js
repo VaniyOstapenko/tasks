@@ -3,11 +3,12 @@
 // являются ли введенные значения 
 // анаграммами
 
-let a = 'пила';
-let b = 'липа';
+const str1 = 'стоп';
+const str2 = 'пост';
 
-if (a.split('').sort().join('') === b.split('').sort().join('')){
-    console.log('анаграмма');
-}else{
-    console.log('не анаграмма');
+
+if (str1.split('').sort().join('') === str2.split('').sort().join('')) {
+    console.log('Анаграмма');
+} else {
+    console.log('Не анаграмма');
 }

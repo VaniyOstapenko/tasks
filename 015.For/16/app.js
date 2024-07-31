@@ -5,13 +5,13 @@
 // равным 4. Посчитать количество 
 // повторений числа 4 в массиве
 
-let a = [1, 2, 5, 9, 4, 13, 4, 10];
+const arr = [1, 2, 5, 9, 4, 13, 4, 10];
+let count = 0
 
-let result = 0;
-
-for (let i = 0; i < a.length; i++) {
-    if (a[i] === 4) {
-        result++;
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 4) {
+        count += 1
     }
 }
-console.log(result);
+
+console.log(count);

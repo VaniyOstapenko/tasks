@@ -5,21 +5,12 @@
 // 1 неч 2 чет 3 неч4 чет 
 // 444444 -> 4 чет 4 чет 4 чет 4 чет 4 чет 4 чет
 
-let a = '3721';
-let b = '4444';
+const n = String(1234);
 
-for (let i = 0; i < a.length; i++) {
-    if (a[i] % 2 === 0) {
-        console.log(a[i] + '-чётное');
+for (let i = 0; i < n.length; i++) {
+    if (n[i] % 2 === 0) {
+        console.log('Чётное');
     } else {
-        console.log(a[i] + '-нечётное');
-    }
-}
-
-for (let i = 0; i < a.length; i++) {
-    if (b[i] % 2 === 0) {
-        console.log(b[i] + '-чётное');
-    } else {
-        console.log(b[i] + '-нечётное');
+        console.log('Нечётное');
     }
 }

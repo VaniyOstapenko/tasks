@@ -10,8 +10,8 @@
 // ** 
 // *
 
-let n = 9;
+const n = 5;
 
-for (let i =n; i >= 1; i--) {
+for (let i = n; i >= 1; i--) {
     console.log('*'.repeat(i));
 }
