@@ -2,9 +2,11 @@
 // С помощью цикла for найдите 
 // произведение всех элементов массива
 
-let a = [4, 7, 9, 5, 2];
-let result = 1;
-for (let i = 0; i < a.length; i++) {
-    result *= a[i];
+const arr = [1, 2, 3, 4, 5];
+let count = 1;
+
+for (let i = 0; i < arr.length; i++) {
+    count *= arr[i]
 }
-console.log(result);
+
+console.log(count);

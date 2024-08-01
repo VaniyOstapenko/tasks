@@ -8,7 +8,7 @@
 // введенного
 
 let a = 5;
-let arr = [1, 2, 3, 6, 5, 10];
+let arr = [1, 2, 3, 5, 6, 10];
 let sum = 0;
 let count = 0;
 for (let i = 0; i < arr.length; i++) {
