@@ -1,25 +1,11 @@
 // Дан массив с элементами[1, 2, 3, 4, 5].
 // С помощью цикла for of найдите сумму элементов этого массива
 
-const a = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5];
+let sum = 0;
 
-let result = 0;
+for (let el of arr) {
+  sum += el;
+}
 
-// for (let i = 0; i < a.length; i++) {
-//     result += a[i];
-// }
-// console.log(result);
-
-// for (let elem of a) {
-//   result += elem;
-// }
-// console.log(result);
-
-let i = 0;
-
-do {
-  result += a[i];
-  i++;
-} while (i < a.length);
-
-console.log(result);
+console.log(sum);

@@ -3,33 +3,33 @@
 // найдите произведение элементов
 // этого массива.
 
-const a = [2, 3, 4, 5];
+const arr = [2, 3, 4, 5];
+let count = 1;
 
-let result = 1;
-
-// for (let i = 0; i < a.length; i++) {
-//   result *= a[i];
+// for (let i = 0; i < arr.length; i++) {
+//   count *= arr[i]
 // }
-// console.log(result);
+
+// console.log(count);
 
 // let i = 0;
-
-// while (i < a.length) {
-//   result *= a[i];
-//   i++;
+// while (i < arr.length) {
+//   count *= arr[i]
+//   i++
 // }
-// console.log(result);
 
-// for (let elem of a) {
-//   result *= elem;
-// }
-// console.log(result);
+// console.log(count);
 
-let i = 0;
+// let i = 0;
+// do {
+//   count *= arr[i]
+//   i++
+// } while (i < arr.length)
 
-do {
-  result *= a[i];
-  i++;
-} while (i < a.length);
+// console.log(count);
 
-console.log(result);
+for (let el of arr) {
+  count *= el;
+}
+
+console.log(count);
