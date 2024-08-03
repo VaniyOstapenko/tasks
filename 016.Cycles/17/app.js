@@ -2,6 +2,5 @@
 // Напишите программу, которая повторяет данное предложение нужное количество раз.
 
 const str = 'Hello My Friends';
-let rep = 5;
 
-console.log(str.repeat(rep));
+console.log(str.repeat(5));
