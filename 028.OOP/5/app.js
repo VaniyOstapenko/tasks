@@ -2,22 +2,19 @@
 // Создать функцию для вывода ряда true, если слова являются анаграммами. Добавить проверки на ввод
 
 class Anagram {
-    isValid(str) {
-        if (!isNaN(str)) throw new Error('ошибка ввода')
+    constructor(str1, str2) {
+        this.str1 = str1;
+        this.str2 = str2;
     }
-    doAnagram(str1, str2) {
-        try {
-            if (str1.split('').sort().join('') === str2.split('').sort().join('')) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (error) {
-            return error.message;
+
+    show() {
+        if (this.str1.split('').sort().join('') === this.str2.split('').sort().join('')) {
+            return 'true'
+        } else {
+            return 'false'
         }
     }
 }
 
-const anagram = new Anagram();
-const sort = anagram.doAnagram('hello', 'llohe')
-console.log(sort);
+const anagram = new Anagram('стоп', 'пост');
+console.log(anagram.show());

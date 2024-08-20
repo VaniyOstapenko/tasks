@@ -1,41 +1,46 @@
-// Реализуйте класс ServerGetAll. Обязательными функциями 
-// считаются функции controller, service, repository. 
-// Цепочка взаимодействия между методами следующая: 
-// controller -> service -> repository, 
-// где: controller–функция, принимающая данные. 
-// Принимает json service–функция проверки на то что 
-// с repository вернулось значение repository–функция, 
-// симулирующая БД. Хранит массив данных. 
-// Взаимодействие с этим массивом осуществляется только 
-// в repository. Массив находится в приложении 
-// Задание: Необходимо вывести в консоль весь массив
+// 6. Реализуйте класс, который находит полное число метров по заданному числу сантиметров.
+//  Добавьтепроверкуна вводтолькочисел.
+//  Входные: 345 →Результат: 3 метров
+//  Входные: 100 → Результат: 1 метр
+//  Входные: 99 →Результат: 0 метров
+//  Входные: 750 →Результат: 7 метров
+//  Входные: 10 →Результат: 0 метров
+//  Входные: hi → Результат: Вы ввелине число!
 
-class ServerGetAll {
-    controller() {
-        try {
-            const ser = this.service();
-            return ser;
-        } catch (error) {
-            return error.message;
-        }
+class TheNumberOfMeters {
+    constructor(n) {
+        this.n = n;
     }
 
-    service() {
-        const rep = this.repository();
-        return rep;
-    }
+    numOfMetr() {
+        if (isNaN(this.n)) throw new Error('Вы ввели не число');
 
-    repository() {
-        const arr = [{ "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
-        { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
-        { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
-        { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
-        { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
-        ]
-        return arr;
+        return `${Math.floor(this.n / 100)} метр(ов)`;
     }
 }
 
-const serverGetAll = new ServerGetAll();
-const result = serverGetAll.controller();
-console.log(result);
+try {
+    const theNumberOfMeters = new TheNumberOfMeters(358)
+    console.log(theNumberOfMeters.numOfMetr());
+} catch (error) {
+    console.log(error.message);
+}
+
+
+// class TheNumberOfMeters {
+//     numOfMetr(n) {
+//         if (isNaN(n)) throw new Error('Вы ввели не число');
+
+//         return `${Math.floor(n / 100)} метр(ов)`;
+//     }
+// }
+
+// try {
+//     const theNumberOfMeters = new TheNumberOfMeters()
+//     console.log(theNumberOfMeters.numOfMetr(345));
+//     console.log(theNumberOfMeters.numOfMetr(100));
+//     console.log(theNumberOfMeters.numOfMetr(99));
+//     console.log(theNumberOfMeters.numOfMetr('hi'));
+// } catch (error) {
+//     console.log(error.message);
+// }

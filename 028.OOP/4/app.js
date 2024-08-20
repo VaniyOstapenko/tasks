@@ -4,21 +4,33 @@
 // внутри класса. Создать функцию для подсчета всех 
 // четных чисел массива. Добавить проверки на ввод
 
+// class MathСalculation {
+//     constructor(n) {
+//         this.n = n;
+//     }
+//     countArr() {
+//         const arr = [];
+//         for (let i = 0; i < this.n; i++) {
+//             arr.push(Math.floor(Math.random() * 10));
+//         }
+//         const newArr = arr.filter((el) => el % 2 == 0)
+//         return newArr.length;
+//     }
+// }
+
+// const mathСalculation = new MathСalculation(5);
+// console.log(mathСalculation.countArr());
+
 class MathСalculation {
-    constructor(n) {
-        this.n = n;
-    }
-    count() {
-        let arr = [];
-        for (let i = 0; i < this.n; i++) {
+    countArr(n) {
+        const arr = [];
+        for (let i = 0; i < n; i++) {
             arr.push(Math.floor(Math.random() * 10));
         }
-        let new_arr = arr.filter((el) => el % 2 === 0);
-        return `${arr}, количество чётных элементов: ${new_arr.length} `;
+        const newArr = arr.filter((el) => el % 2 == 0)
+        return newArr.length;
     }
 }
 
-
-const mathСalculation = new MathСalculation(10);
-const result = mathСalculation.count();
-console.log(result);
+const mathСalculation = new MathСalculation();
+console.log(mathСalculation.countArr(5));
