@@ -20,17 +20,17 @@ class TwoSum {
     }
 
     findIndices() {
-        const indexArr = []
-        for (let i = 0; i < this.arr.length; i++) {
-            const firstEl = this.arr[i]
-            for (let j = 1; j < this.arr.length; j++) {
-                const secondEl = this.arr[j];
-                if (firstEl + this.arr[j] === this.target) {
-                    indexArr.push(firstEl, secondEl)
+        const arr = []
+        for (let i = 0; i < this.nums.length; i++) {
+            const firstArr = this.nums[i];
+            for (let j = 1; j < this.nums.length; j++) {
+                const secondArr = this.nums[j]
+                if (firstArr + secondArr == this.target) {
+                    arr.push(i, j)
                 }
             }
         }
-        return indexArr;
+        return arr;
     }
 }
 

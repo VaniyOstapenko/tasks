@@ -13,8 +13,7 @@ class Number {
 
 class PalindromeChecker extends Number {
     checkPalindrom() {
-        const str = this.num.toString();
-        return str == str.split('').reverse().join('') ? true : false;
+        return String(this.num) == String(this.num).split('').reverse().join('') ? true : false;
     }
 }
 

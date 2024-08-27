@@ -12,14 +12,17 @@ class CommonPrefix {
     }
 
     findLongestPrefix() {
-        const prefix = this.arr[0]
-        for (let i = 1; i < this.arr.length; i++) {
-            if (this.arr[0][i] === prefix) {
-                return this.arr[i]
+        let count = this.arr[0];
+        for (let i = 0; i < this.arr.length; i++) {
+            for (let j = 1; j < count.length; j++) {
+                if (count[j] !== this.arr[i][j]) {
+                    count = count.slice(0, j)
+                }
             }
         }
+        return count;
     }
 }
 
-const commonPrefix = new CommonPrefix(["flower", "flow", "flight"]);
+const commonPrefix = new CommonPrefix(["flower", "flow", "flight"])
 console.log(commonPrefix.findLongestPrefix());
