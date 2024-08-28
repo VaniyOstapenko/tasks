@@ -12,13 +12,13 @@ class Number {
 
 class SquareRootCalculator extends Number {
     calculateSquareRoot() {
-        for (let i = 0; i <= this.n; i++) {
-            if (i * i === this.n) {
+        for (let i = 0; i < this.n; i++) {
+            if (i * i == this.n) {
                 return i;
             }
         }
     }
 }
 
-const squareRootCalculator = new SquareRootCalculator(16);
+const squareRootCalculator = new SquareRootCalculator(25)
 console.log(squareRootCalculator.calculateSquareRoot());
