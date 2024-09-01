@@ -2,25 +2,21 @@
 // функцию возвращающую новый массив из элементов, каждое значение которого имеет вид #name. 
 // [“hschool”, “company”] -> [“#hschool”, “#company”]
 
-
-const n = 5;
-
-function doArray(n) {
-    const arr = [];
-    for (let i = 0; i < n; i++) {
-        arr.push(prompt('элемент массива'));
+class HashArr {
+    constructor(n) {
+        this.n = n;
     }
-    return arr;
+
+    createArr() {
+        const arr = [];
+        for (let i = 0; i < this.n; i++) {
+            arr.push(prompt('Введите элемент массива'))
+        }
+        console.log(arr);
+        const newArr = arr.map((el) => `#${el}`)
+        console.log(newArr);
+    }
 }
 
-const result = doArray(n);
-
-function doSlesh(result) {
-    const new_arr = result.map(function (el) {
-        return '#' + el;
-    })
-    return new_arr;
-}
-
-const res = doSlesh(result);
-console.log(res);
+const hashArr = new HashArr(5);
+hashArr.createArr()

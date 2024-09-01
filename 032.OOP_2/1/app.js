@@ -2,22 +2,20 @@
 // Необходимо создать функцию возвращающую новый массив из отфильтрованных значений, где строка начинается 
 // на [a, h]. [“ann”, “school”, “hschool”, “borabora”] -> [“ann”, “hschool”]
 
-const n = 5;
-
-function doArray(n) {
-    const arr = [];
-    for (let i = 0; i < n; i++) {
-        arr.push(prompt('элемент массива'));
+class StartPref {
+    constructor(n) {
+        this.n = n;
     }
-    return arr;
+    createArr() {
+        const arr = [];
+        for (let i = 0; i < this.n; i++) {
+            arr.push(prompt('Введите элемент массива'))
+        }
+        console.log(arr);
+        const newArr = arr.filter((el) => el[0] == 'a' || el[0] == 'h' ? el : null)
+        console.log(newArr);
+    }
 }
 
-const result = doArray(n);
-
-function doFilterArr(result) {
-    const new_arr = result.filter((el) => el[0] === 'a' || el[0] === 'h');
-    return new_arr;
-}
-
-const res = doFilterArr(result);
-console.log(res);
+const startPref = new StartPref(5);
+startPref.createArr();
